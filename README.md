@@ -909,19 +909,17 @@ function newRequestModule(url) {
   // ...
 }
 
-const req = newRequestModule;
-inventoryTracker('apples', req, 'www.inventory-awesome.io');
+inventoryTracker('apples', newRequestModule, 'www.inventory-awesome.io');
 
 ```
 
 **Good:**
 ```javascript
-function newRequestModule(url) {
+function requestModule(url) {
   // ...
 }
 
-const req = newRequestModule;
-inventoryTracker('apples', req, 'www.inventory-awesome.io');
+inventoryTracker('apples', requestModule, 'www.inventory-awesome.io');
 ```
 **[⬆ back to top](#table-of-contents)**
 
